@@ -1,0 +1,56 @@
+$header-font-color: rgb(100,100,100);
+$nav-font-color: rgb(255,255,255);
+$header-bg-color: rgb(230,230,230);
+$nav-bg-color: rgb(47, 110, 192);
+
+
+header {
+    background-color: $header-bg-color;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+
+    #logos {
+        display: flex;
+
+        img {
+            margin: 0px 5px;
+        }
+
+        .dividers {
+            width: 1px;
+            background-color: $header-font-color;
+        }
+    }
+
+    #contact-info {
+        display: flex;
+        flex-wrap: wrap;
+
+        p {
+            margin: 0px 20px 0px 0px;
+        }
+    }
+}
+
+nav {
+    display: flex;
+    height: 50px;
+    width: 100vw;
+    font-size: 12px;
+    justify-content: space-around;
+    align-items: center;
+    background-color: $nav-bg-color;
+
+    a {
+        color: $nav-font-color;
+        transition: all .2s ease;
+        text-decoration: none !important;
+    }
+
+    a:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+}
