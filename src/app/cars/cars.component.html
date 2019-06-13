@@ -16,13 +16,13 @@
 
 
   <div class="cars-grid">
-    <div class="car-card" *ngFor="let index of numbers">
-      <img src="https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+    <div class="car-card" *ngFor="let index of indexes">
+      <img src="{{ cars[index].image }}" alt="">
       <div class="line"></div>
       <div class="card-text">
-        <h2>2017 BMW 328-Xi</h2>
-        <h3>21mpg</h3>
-        <p>$45,000</p>
+        <h2>{{ cars[index].make }} {{ cars[index].model }}</h2>
+        <h3>{{ cars[index].mileage }}</h3>
+        <p>${{ cars[index].price }}</p>
         <input type="checkbox">
       </div>
     </div>
