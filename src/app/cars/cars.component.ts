@@ -9,11 +9,9 @@ import { CarModel } from '../models/carModel';
 })
 export class CarsComponent implements OnInit {
 
-  indexes: number[];
-  cars: any;
+  cars: CarModel[];
 
   constructor(private carsService: CarsService) {
-    this.indexes = [1,2,3,4,5,6,7,8];
   }
   
   selectCar(){
@@ -23,7 +21,8 @@ export class CarsComponent implements OnInit {
    /*  this.cars = this.carService.findAllProducts(); //Finds all of our carss and gives it to us
     console.log(this.cars) */
     this.carsService.getInitialCars().subscribe((data) => {
-      this.cars = data;
+      this.cars = data as CarModel[];
+      this.cars = this.cars.slice(1,9);
     });
   }
 
