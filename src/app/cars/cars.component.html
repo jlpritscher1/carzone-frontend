@@ -7,8 +7,8 @@
       <button>CARS ON SPECIALS</button>
     </div>
     <div class="car-tab offset">
-      <button>COMPARE</button>
-      <button>SEE ALL</button>
+      <button>COMPARE<i class="fas fa-arrow-right"></i></button>
+      <button>SEE ALL<i class="fas fa-arrow-right"></i></button>
     </div>
   </div>
 
@@ -24,6 +24,7 @@
         <h3>{{ cars[index].mileage }}</h3>
         <p>${{ cars[index].price }}</p>
         <input type="checkbox">
+        <i class="far fa-heart"></i> <!-- this icon's 1) style prefix == fas and 2) icon name == heart -->
       </div>
     </div>
   </div>
