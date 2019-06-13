@@ -41,7 +41,7 @@
 }
 
 h3{
-    color: rgb(47, 110, 192)
+    color: rgb(47,110,192);
 }
 
 .white{
@@ -108,6 +108,43 @@ h3{
                     background-color: rgb(139, 174, 221);
                 }
             }
+        }
+    }
+}
+
+
+
+.review-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 25px 0px;
+
+    h4 {
+        margin-top: 0;
+    }
+
+    form {
+        * {
+            margin-bottom: 5px;
+        }
+
+        button {
+            color: white;
+            border: 0;
+            padding: 10px;
+            border-radius: 5px;
+            margin-right: 3px;
+            cursor: pointer;
+            background: rgb(47, 110, 192);
+        }
+
+        input,textarea,select {
+            background: black;
+            color: white;
+            padding: 5px;
+            border: 0;
         }
     }
 }
