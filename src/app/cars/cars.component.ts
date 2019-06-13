@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarsComponent implements OnInit {
 
-  constructor() { }
+  numbers: number[];
 
+  constructor() {
+    this.numbers = [1,2,3,4,5,6,7,8];
+  }
+  
+  selectCar(){
+    console.log("You have selected this car.")
+  }
   ngOnInit() {
+   /*  this.cars = this.carService.findAllProducts(); //Finds all of our carss and gives it to us
+    console.log(this.cars) */
   }
 
 }
