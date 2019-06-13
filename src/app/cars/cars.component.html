@@ -1,51 +1,30 @@
-<!-- <p>
-  car-component works!
-</p>
-<button (click)=selectCar()>Select This Car</button> -->
-
 <!--This is where ALL of the products will be shown-->
+<div class="cars-wrapper">
 
-<div class="wrapper">
-  <div>
-    <img src="http://placehold.it/280x200" alt="">
-    <h2>Year, Make, Model</h2>
-    <h3>Mileage</h3>
-    <p>Price</p>
-    <input type="checkbox">
+  <div class="cars-grid-controls">
+    <div class="car-tab">
+      <button>NEW ARRIVALS</button>
+      <button>CARS ON SPECIALS</button>
+    </div>
+    <div class="car-tab offset">
+      <button>COMPARE</button>
+      <button>SEE ALL</button>
+    </div>
   </div>
-  <div>
-    <img src="http://placehold.it/280x200" alt="">
-    <h2>Year, Make, Model</h2>
-    <h3>Mileage</h3>
-    <p>Price</p>
-    <input type="checkbox">
-  </div>
-  <div>
-    <img src="http://placehold.it/280x200" alt="">
-    <h2>Year, Make, Model</h2>
-    <h3>Mileage</h3>
-    <p>Price</p>
-    <input type="checkbox">
-  </div>
-  <div>
-    <img src="http://placehold.it/280x200" alt="">
-    <h2>Year, Make, Model</h2>
-    <h3>Mileage</h3>
-    <p>Price</p>
-    <input type="checkbox">
-  </div>
-  <div>
-    <img src="http://placehold.it/280x200" alt="">
-    <h2>Year, Make, Model</h2>
-    <h3>Mileage</h3>
-    <p>Price</p>
-    <input type="checkbox">
-  </div>
-  <div>
-    <img src="http://placehold.it/280x200" alt="">
-    <h2>Year, Make, Model</h2>
-    <h3>Mileage</h3>
-    <p>Price</p>
-    <input type="checkbox">
+
+  <div class="cars-control-line"></div>
+
+
+  <div class="cars-grid">
+    <div class="car-card" *ngFor="let index of numbers">
+      <img src="https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+      <div class="line"></div>
+      <div class="card-text">
+        <h2>2017 BMW 328-Xi</h2>
+        <h3>21mpg</h3>
+        <p>$45,000</p>
+        <input type="checkbox">
+      </div>
+    </div>
   </div>
 </div>
