@@ -1,24 +1,26 @@
 .why-carzone{
-    width: 100vw;
+    width: calc(100vw-50vw-5vw);
     background-image: radial-gradient( rgb(50, 147, 207), rgb(47, 110, 192));
+    padding: 15px 50vw 15px 15vw;
 }
 
 .text{
-    margin:  15px 50vw 15px 15vw; // margin goes top right bottom left
     color: white;
 }
 
-.hours{
+.info-section{
     display: flex;
-    align-items: center;
+    align-items: top;
     width: 100vw;
+    height: auto;
     justify-content: space-around;
-    background-color:#E6E6E6;
+    background-color:rgb(242, 252, 255);
 }
 
 .info{
     width: 30vw;
-    height: 300px;
+    padding-bottom: 10px;
+    background-color: rgb(242, 252, 255);
 }
 
 .cust-review{
@@ -39,7 +41,7 @@
 }
 
 h3{
-    color: rgb(47, 110, 192)
+    color: rgb(47,110,192);
 }
 
 .white{
@@ -106,6 +108,43 @@ h3{
                     background-color: rgb(139, 174, 221);
                 }
             }
+        }
+    }
+}
+
+
+
+.review-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 25px 0px;
+
+    h4 {
+        margin-top: 0;
+    }
+
+    form {
+        * {
+            margin-bottom: 5px;
+        }
+
+        button {
+            color: white;
+            border: 0;
+            padding: 10px;
+            border-radius: 5px;
+            margin-right: 3px;
+            cursor: pointer;
+            background: rgb(47, 110, 192);
+        }
+
+        input,textarea,select {
+            background: black;
+            color: white;
+            padding: 5px;
+            border: 0;
         }
     }
 }

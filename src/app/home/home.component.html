@@ -64,7 +64,7 @@
   </div>
 </div>
 
-<div class="hours">
+<div class="info-section">
   <div class="info">
     <h3>PEACE OF MIND</h3>
     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel error excepturi optio. Alias incidunt mollitia hic tenetur a libero asperiores. Eius quod est illo consequatur corrupti odit quaerat repellendus quia.</p>
@@ -89,7 +89,7 @@
     <p class="cust-review">Easy, quick & honest. Vanessa and Sam were wonderful to work with...</p>
     <hr>
   </div>
-  <div class="info">
+  <div class="info hours">
     <table>
       <h3 class="table-head">WORKING HOURS</h3>
       <tr>
@@ -146,17 +146,18 @@
 </div>
 
 <div class="review-form">
-  <form>
-    <input name="cn" type="text" placeholder="Enter Your Name">
-    <select>
+  <h4> Submit Review Below</h4>
+  <form class="sub-review">
+    <input class="user-fields" name="cn" type="text" placeholder="Enter Your Name"><br>
+    <select class="user-fields">
       <option value="" selected disabled hidden>Rating</option>
       <option value="5 star">5 Star</option>
       <option value="4 star">4 Star</option>
       <option value="3 star">3 Star</option>
       <option value="2 star">2 Star</option>
       <option value="1 star">1 Star</option>
-    </select>
-    <textarea name="review-msg" id="" cols="30" rows="10" placeholder="Enter Your Review Here..."></textarea>
+    </select><br>
+    <textarea class="user-fields" name="review-msg" id="" cols="30" rows="10" placeholder="Enter Your Review Here..."></textarea><br>
     <button class="review-submit-btn" type="button">SUBMIT REVIEW</button>
   </form>
 </div>
