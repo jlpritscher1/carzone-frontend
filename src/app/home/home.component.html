@@ -90,24 +90,19 @@
 </div>
 
 <div class="review-form">
-  <form>
-    <input name="cn" type="text" placeholder="Enter Your Name">
-    <select>
+  <h4> Submit Review Below</h4>
+  <form class="sub-review">
+    <input class="user-fields" name="cn" type="text" placeholder="Enter Your Name"><br>
+    <select class="user-fields">
       <option value="" selected disabled hidden>Rating</option>
       <option value="5 star">5 Star</option>
       <option value="4 star">4 Star</option>
       <option value="3 star">3 Star</option>
       <option value="2 star">2 Star</option>
       <option value="1 star">1 Star</option>
-    </select>
-    <textarea name="review-msg" id="" cols="30" rows="10" placeholder="Enter Your Review Here..."></textarea>
+    </select><br>
+    <textarea class="user-fields" name="review-msg" id="" cols="30" rows="10" placeholder="Enter Your Review Here..."></textarea><br>
     <button class="review-submit-btn" type="button">SUBMIT REVIEW</button>
   </form>
 </div>
 
-<!-- <form action=""> 
-    <input name='name' [(ngModel)]="name" type='text' placeholder="Your Name" class="contact-input"><br>
-    <input name='email' [(ngModel)]="email" type='email' placeholder="Your Email Address" class="contact-input"><br>
-    <textarea name='message' [(ngModel)]="message" rows="10" cols="50" placeholder="YOUR MESSAGE HERE...." class="contact-message"></textarea><br>
-    <button (click)="submitContact()" class="message-submit-btn" type="button">SUBMIT</button>
-  </form> -->
