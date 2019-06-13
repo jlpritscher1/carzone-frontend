@@ -1,3 +1,58 @@
+.why-carzone{
+    width: 100vw;
+    background-image: radial-gradient( rgb(50, 147, 207), rgb(47, 110, 192));
+}
+
+.text{
+    margin:  15px 50vw 15px 15vw; // margin goes top right bottom left
+    color: white;
+}
+
+.hours{
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    justify-content: space-around;
+    background-color:#E6E6E6;
+}
+
+.info{
+    width: 30vw;
+    height: 300px;
+}
+
+.cust-review{
+    margin: 0px;
+}
+
+.cust-name{
+    margin: 0px;
+}
+
+.day{
+    text-align: center;
+    color: rgb(47, 110, 192)
+}
+
+.table-head{
+    color: white;
+}
+
+h3{
+    color: rgb(47, 110, 192)
+}
+
+.white{
+    color: white;
+    margin: 0px;
+    padding: 15px;
+}
+
+.lorem{
+    margin: 0px;
+    padding-bottom: 15px;
+}
+
 .hero {
     height: 500px;
     width: 100vw;
