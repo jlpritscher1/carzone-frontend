@@ -1,11 +1,68 @@
+.why-carzone{
+    width: calc(100vw-50vw-5vw);
+    background-image: radial-gradient( rgb(50, 147, 207), rgb(47, 110, 192));
+    padding: 15px 50vw 15px 15vw;
+}
+
+.text{
+    color: white;
+}
+
+.info-section{
+    display: flex;
+    align-items: top;
+    width: 100vw;
+    height: auto;
+    justify-content: space-around;
+    background-color:rgb(242, 252, 255);
+}
+
+.info{
+    width: 30vw;
+    padding-bottom: 10px;
+    background-color: rgb(242, 252, 255);
+}
+
+.cust-review{
+    margin: 0px;
+}
+
+.cust-name{
+    margin: 0px;
+}
+
+.day{
+    text-align: center;
+    color: rgb(47, 110, 192)
+}
+
+.table-head{
+    color: rgb(47,110,192);
+}
+
+h3{
+    color: rgb(47,110,192);
+}
+
+.white{
+    color: white;
+    margin: 0px;
+    padding: 15px;
+}
+
+.lorem{
+    margin: 0px;
+    padding-bottom: 15px;
+}
+
 .hero {
     height: 500px;
     width: 100vw;
-    background-image: url('../../assets/main-car.jpg');
+    background-image: url('../../assets/main-car3.jpg');
     background-color: rgb(216, 216, 216);
     background-repeat: no-repeat;
-    background-position: center;
-    background-size: auto auto;
+    background-position: bottom;
+    background-size: 100vw auto;
 
     img {
         width: 100%;
@@ -51,6 +108,43 @@
                     background-color: rgb(139, 174, 221);
                 }
             }
+        }
+    }
+}
+
+
+
+.review-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 25px 0px;
+
+    h4 {
+        margin-top: 0;
+    }
+
+    form {
+        * {
+            margin-bottom: 5px;
+        }
+
+        button {
+            color: white;
+            border: 0;
+            padding: 10px;
+            border-radius: 5px;
+            margin-right: 3px;
+            cursor: pointer;
+            background: rgb(47, 110, 192);
+        }
+
+        input,textarea,select {
+            background: black;
+            color: white;
+            padding: 5px;
+            border: 0;
         }
     }
 }

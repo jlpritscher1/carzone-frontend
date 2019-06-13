@@ -1,3 +1,12 @@
-<p>
-  contact works!
-</p>
+<div class="contact-form">
+
+  <h2 class="contact-title"><u>CONTACT US</u></h2>
+
+  <form action=""> 
+    <input name='name' [(ngModel)]="name" type='text' placeholder="Your Name" class="contact-input"><br>
+    <input name='email' [(ngModel)]="email" type='email' placeholder="Your Email Address" class="contact-input"><br>
+    <textarea name='message' [(ngModel)]="message" rows="10" cols="50" placeholder="YOUR MESSAGE HERE...." class="contact-message"></textarea><br>
+    <button (click)="submitContact()" class="message-submit-btn" type="button">SUBMIT</button>
+  </form>
+</div>
+
