@@ -50,5 +50,62 @@ h3{
 
 .lorem{
     margin: 0px;
-    padding-bottom: 15px
+    padding-bottom: 15px;
+}
+
+.hero {
+    height: 500px;
+    width: 100vw;
+    background-image: url('../../assets/main-car3.jpg');
+    background-color: rgb(216, 216, 216);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100vw auto;
+
+    img {
+        width: 100%;
+    }
+
+    .form-wrapper {
+        background-color: rgb(45, 51, 58);
+        text-align: center;
+        color: rgb(47, 110, 192);
+        height: 100%;
+        width: 450px;
+        float: right;
+        margin-right: 17%;
+        
+        form {
+            display: grid;
+            height: 60%;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            grid-column-gap: 10px;
+            padding: 25px;
+
+            select {
+                height: 35px;
+            }
+
+            .form-buttons {
+                
+                * {
+                    color: white;
+                    border: 0;
+                    padding: 10px;
+                    border-radius: 5px;
+                    margin-right: 3px;
+                    cursor: pointer;
+                }
+
+                #search {
+                    background-color: rgb(47, 110, 192);
+                }
+
+                #reset {
+                    background-color: rgb(139, 174, 221);
+                }
+            }
+        }
+    }
 }
