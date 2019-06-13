@@ -1,3 +1,3 @@
-export interface CarModel {
+export interface ProductTile {
     
 }
