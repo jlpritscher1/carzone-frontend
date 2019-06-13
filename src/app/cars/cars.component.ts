@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarsComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+    {
 
+    }
+  }
+  
+  selectCar(){
+    console.log("You have selected this car.")
+  }
   ngOnInit() {
+   /*  this.cars = this.carService.findAllProducts(); //Finds all of our carss and gives it to us
+    console.log(this.cars) */
   }
 
 }
