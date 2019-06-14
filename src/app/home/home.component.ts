@@ -12,6 +12,7 @@ export class HomeComponent implements OnInit {
 
   reviews: ReviewModel[];
   searchParams: {};
+  newReview: {};
 
   constructor(private reviewsService: ReviewsService) { 
     this.searchParams = {
@@ -22,6 +23,12 @@ export class HomeComponent implements OnInit {
       minPrice: null,
       maxPrice: null,
       maxMileage: null
+    }
+
+    this.newReview = {
+      name: null,
+      rating: "",
+      message: null
     }
   }
 
@@ -40,4 +47,7 @@ export class HomeComponent implements OnInit {
     this.carChild.resetCars();
   }
 
+  submitReview() {
+    this.reviewsService.submitReview(this.newReview)
+  }
 }

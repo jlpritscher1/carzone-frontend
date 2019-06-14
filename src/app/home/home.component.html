@@ -144,16 +144,16 @@
 <div class="review-form">
   <h4> Submit Review Below</h4>
   <form class="sub-review">
-    <input class="user-fields" name="cn" type="text" placeholder="Enter Your Name"><br>
-    <select class="user-fields">
+    <input class="user-fields" name="cn" type="text" placeholder="Enter Your Name" [(ngModel)]="newReview.name" [ngModelOptions]="{standalone: true}"><br>
+    <select class="user-fields" [(ngModel)]="newReview.rating" [ngModelOptions]="{standalone: true}">
       <option value="" selected disabled hidden>Rating</option>
-      <option value="5 star">5 Star</option>
-      <option value="4 star">4 Star</option>
-      <option value="3 star">3 Star</option>
-      <option value="2 star">2 Star</option>
-      <option value="1 star">1 Star</option>
+      <option value="5">5 Star</option>
+      <option value="4">4 Star</option>
+      <option value="3">3 Star</option>
+      <option value="2">2 Star</option>
+      <option value="1">1 Star</option>
     </select><br>
-    <textarea class="user-fields" name="review-msg" id="" cols="60" rows="10" placeholder="Enter Your Review Here..."></textarea><br>
-    <button class="review-submit-btn" type="button">SUBMIT REVIEW</button>
+    <textarea class="user-fields" name="review-msg" id="" cols="60" rows="10" placeholder="Enter Your Review Here..." [(ngModel)]="newReview.message" [ngModelOptions]="{standalone: true}"></textarea><br>
+    <button class="review-submit-btn" type="button" (click)="submitReview()">SUBMIT REVIEW</button>
   </form>
 </div>
