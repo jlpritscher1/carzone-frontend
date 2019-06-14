@@ -77,17 +77,14 @@
       <li>Best Pricing/ Rates within 300 miles</li>
     </ul>
   </div>
-  <div class="info">
+  <div  class="info scroll">
     <h3>CUSTOMER REVIEWS</h3>
-    <h5 class="cust-name"> John Young</h5>
-    <p class="cust-review">Just bought a BMW 330i and had a blast doing it!!! I have never met such...</p>
-    <hr>
-    <h5 class="cust-name"> Carolina Julie</h5>
-    <p class="cust-review">Thanks to Argenis!!! Went in there and no games. Let him know where we...</p>
-    <hr>
-    <h5 class="cust-name"> John Young</h5>
-    <p class="cust-review">Easy, quick & honest. Vanessa and Sam were wonderful to work with...</p>
-    <hr>
+      <div *ngFor= 'let review of reviews'>
+        <h5> {{ review.name }} </h5>
+        <p> {{ review.rating }} </p>
+        <p> {{ review.message }} </p>
+        <hr>
+      </div>
   </div>
   <div class="info hours">
     <table>
