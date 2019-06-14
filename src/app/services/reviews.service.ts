@@ -17,4 +17,9 @@ export class ReviewsService {
     return this.http.get('http://carzone.herokuapp.com/reviews')
   }
 
+  submitReview(review) {
+    console.log(review)
+    return this.http.post('http://carzone.herokuapp.com/reviews', review).subscribe(review_response => console.log(review_response));
+  }
+
 }

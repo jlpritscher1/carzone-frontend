@@ -11,8 +11,16 @@ import { ReviewModel } from '../models/reviewModel'
 export class HomeComponent implements OnInit {
 
   reviews: ReviewModel[];
+  newReview: {}
 
-  constructor(private reviewsService: ReviewsService) { }
+  constructor(private reviewsService: ReviewsService) { 
+    this.newReview = {
+      name: null,
+      rating: "Rating",
+      message: null
+    }
+    
+  }
 
   ngOnInit() {
     this.reviewsService.getReviews().subscribe((data) => {
@@ -21,5 +29,8 @@ export class HomeComponent implements OnInit {
     });
   }
   
+  submitReview() {
+    this.reviewsService.submitReview(this.newReview);
+  }
 
 }
