@@ -66,6 +66,11 @@
             font-weight: bold;
             height: 100%;
             cursor: pointer;
+
+            i {
+                margin-left: 5px;
+                padding-top: 1px;
+            }
         }
 
         button:nth-child(1) {
@@ -90,4 +95,9 @@
     height: 5px;
     background-color: rgb(139, 174, 221); 
     margin-bottom: 25px;
+}
+
+i{
+    float: right;
+    padding-right: 20px;
 }

@@ -2,58 +2,57 @@
   <div class="form-wrapper">
     <h1>SEARCH PRE-OWNED CARS</h1>
     <form action="">
-      <select name="make" id="make">
-        <option value="" selected disabled hidden>Make</option>
+      <select name="make" id="make" [(ngModel)]="searchParams.make" [ngModelOptions]="{standalone: true}">
+        <option value="Make" selected disabled hidden>Make</option>
+        <option value="Honda">Honda</option>
+        <option value="Dodge">Dodge</option>
         <option value="Ford">Ford</option>
-        <option value="Hyundai">Hyundai</option>
-        <option value="Infiniti">Infiniti</option>
-        <option value="Mercedes-Benz">Mercedes-Benz</option>
         <option value="Nissan">Nissan</option>
+        <option value="Chevrolet">Chevrolet</option>
+        <option value="Toyota">Toyota</option>
+        <option value="Jeep">Jeep</option>
       </select>
-      <select name="model" id="model">
-        <option value="" selected disabled hidden>Model</option>
-        <option value="Focus">Focus</option>
-        <option value="C-300">C-300</option>
-        <option value="Sonata">Sonata</option>
+      <select name="model" id="model" [(ngModel)]="searchParams.model" [ngModelOptions]="{standalone: true}">
+        <option value="Model" selected disabled hidden>Model</option>
+        <option value="Civic">Civic</option>
+        <option value="Charger">Charger</option>
+        <option value="Escape">Escape</option>
+        <option value="CRV">CRV</option>
+        <option value="Rogue">Rogue</option>
+        <option value="Equinox">Equinox</option>
+        <option value="Highlander">Highlander</option>
+        <option value="Wrangler">Wrangler</option>
+        <option value="Camry">Camry</option>
+        <option value="Accord">Accord</option>
+        <option value="Corolla">Corolla</option>
         <option value="Altima">Altima</option>
-        <option value="Q50">Q50</option>
+        <option value="Fusion">Fusion</option>
       </select>
-      <select name="year" id="year">
-        <option value="" selected disabled hidden>Year</option>
-        <option value="2010">2010</option>
-        <option value="2011">2011</option>
-        <option value="2012">2012</option>
+      <select name="color" id="color" [(ngModel)]="searchParams.color" [ngModelOptions]="{standalone: true}">
+        <option value="Color" selected disabled hidden>Color</option>
+        <option value="Silver">Silver</option>
+        <option value="Black">Black</option>
+        <option value="Blue">Blue</option>
+        <option value="Green">Green</option>
+        <option value="White">White</option>
+        <option value="Red">Red</option>
       </select>
-      <select name="body-type" id="body-type">
-        <option value="" selected disabled hidden>Body Type</option>
+      <select name="body-type" id="body-type" [(ngModel)]="searchParams.bodyType" [ngModelOptions]="{standalone: true}">
+        <option value="Body Type" selected disabled hidden>Body Type</option>
         <option value="SUV">SUV</option>
         <option value="Sedan">Sedan</option>
-        <option value="Midsize">Midsize</option>
       </select>
-      <select name="min-price" id="min-price">
-        <option value="" selected disabled hidden>Min. Price</option>
-        <option value="12">$12</option>
-        <option value="25000">$25,000</option>
-      </select>
-      <select name="max-price" id="max-price">
-        <option value="" selected disabled hidden>Max Price</option>
-        <option value="1">$1</option>
-        <option value="999999">$999,999</option>
-      </select>
-      <select name="mileage" id="mileage"> 
-        <option value="" selected disabled hidden>Mileage</option>
-        <option value="35mpg">35mpg</option>
-        <option value="150mpg">150mpg</option>
-        <option value="10mpg">10mpg</option>
-      </select>
+      <input type="number" id="minprice" placeholder="Min Price" [(ngModel)]="searchParams.minPrice" [ngModelOptions]="{standalone: true}">
+      <input type="number" id="maxprice" placeholder="Max Price" [(ngModel)]="searchParams.maxPrice" [ngModelOptions]="{standalone: true}">
+      <input type="number" id="maxmileage" placeholder="Max Mileage" [(ngModel)]="searchParams.maxMileage" [ngModelOptions]="{standalone: true}">
       <div class="form-buttons">
-        <button id="search">SEARCH</button>
-        <button id="reset">RESET</button>
+        <button id="search" (click)="searchCars()">SEARCH</button>
+        <button id="reset" (click)="resetCars()">RESET</button>
       </div>
     </form>
   </div>
 </div>
-<app-cars></app-cars>
+<app-cars #carChild></app-cars>
 <div class="why-carzone">
   <div class="text">
     <h3 class="white">Why Choose Car Zone?</h3>
@@ -88,7 +87,7 @@
   </div>
   <div class="info hours">
     <table>
-      <h3 class="table-head">WORKING HOURS</h3>
+      <h3 class="table-head"><i class="far fa-clock"></i> WORKING HOURS</h3>
       <tr>
         <th>DAY</th>
         <th>SALES</th>
@@ -145,16 +144,16 @@
 <div class="review-form">
   <h4> Submit Review Below</h4>
   <form class="sub-review">
-    <input [(ngModel)]="newReview.name" [ngModelOptions]="{standalone: true}" class="user-fields" name="cn" type="text" placeholder="Enter Your Name"><br>
-    <select [(ngModel)]="newReview.rating" [ngModelOptions]="{standalone: true}" class="user-fields">
-      <option value="Rating" selected disabled hidden>Rating</option>
+    <input class="user-fields" name="cn" type="text" placeholder="Enter Your Name" [(ngModel)]="newReview.name" [ngModelOptions]="{standalone: true}"><br>
+    <select class="user-fields" [(ngModel)]="newReview.rating" [ngModelOptions]="{standalone: true}">
+      <option value="" selected disabled hidden>Rating</option>
       <option value="5">5 Star</option>
       <option value="4">4 Star</option>
       <option value="3">3 Star</option>
       <option value="2">2 Star</option>
       <option value="1">1 Star</option>
     </select><br>
-    <textarea [(ngModel)]="newReview.message" [ngModelOptions]="{standalone: true}" class="user-fields" name="review-msg" id="" cols="60" rows="10" placeholder="Enter Your Review Here..."></textarea><br>
-    <button (click)="submitReview()" class="review-submit-btn" type="button">SUBMIT REVIEW</button>
+    <textarea class="user-fields" name="review-msg" id="" cols="60" rows="10" placeholder="Enter Your Review Here..." [(ngModel)]="newReview.message" [ngModelOptions]="{standalone: true}"></textarea><br>
+    <button class="review-submit-btn" type="button" (click)="submitReview()">SUBMIT REVIEW</button>
   </form>
 </div>

@@ -7,8 +7,8 @@
       <button>CARS ON SPECIALS</button>
     </div>
     <div class="car-tab offset">
-      <button>COMPARE</button>
-      <button>SEE ALL</button>
+      <button>COMPARE<i class="fas fa-arrow-right"></i></button>
+      <button>SEE ALL<i class="fas fa-arrow-right"></i></button>
     </div>
   </div>
 
@@ -16,14 +16,15 @@
 
 
   <div class="cars-grid">
-    <div class="car-card" *ngFor="let index of indexes">
-      <img src="{{ cars[index].image }}" alt="">
+    <div class="car-card" *ngFor="let car of cars">
+      <img src="{{ car.image }}" alt="">
       <div class="line"></div>
       <div class="card-text">
-        <h2>{{ cars[index].make }} {{ cars[index].model }}</h2>
-        <h3>{{ cars[index].mileage }}</h3>
-        <p>${{ cars[index].price }}</p>
+        <h2>{{ car.make }} {{ cars.model }}</h2>
+        <h3>{{ car.mileage }}</h3>
+        <p>${{ car.price }}</p>
         <input type="checkbox">
+        <i class="far fa-heart"></i> <!-- this icon's 1) style prefix == fas and 2) icon name == heart -->
       </div>
     </div>
   </div>

@@ -9,11 +9,11 @@ import { CarModel } from '../models/carModel';
 })
 export class CarsComponent implements OnInit {
 
-  indexes: number[];
-  cars: any;
+  cars: CarModel[];
+  allCars: CarModel[];
 
   constructor(private carsService: CarsService) {
-    this.indexes = [1,2,3,4,5,6,7,8];
+  
   }
   
   selectCar(){
@@ -23,12 +23,72 @@ export class CarsComponent implements OnInit {
    /*  this.cars = this.carService.findAllProducts(); //Finds all of our carss and gives it to us
     console.log(this.cars) */
     this.carsService.getInitialCars().subscribe((data) => {
-      this.cars = data;
+      this.allCars = data as CarModel[];
+      this.cars = this.allCars.slice(1,9);
     });
   }
 
   printCars() {
     console.log(this.cars.slice(1,9));
+  }
+
+  queryCars(queryParams) {
+    console.log(queryParams);
+    this.cars = [];
+    for( var car of this.allCars) {
+
+      var addCar = true;
+
+      if(queryParams.make != "Make") {
+        if(queryParams.make.toLowerCase() != car.make.toLowerCase()) {
+          addCar = false;
+        }
+      }
+
+      if(queryParams.model != "Model") {
+        if(queryParams.model.toLowerCase() != car.model.toLowerCase()) {
+          addCar = false;
+        }
+      }
+
+      if(queryParams.color != "Color") {
+        if(queryParams.model.toLowerCase() != car.color.toLowerCase()) {
+          addCar = false;
+        }
+      }
+
+      if(queryParams.bodyType != "Body Type") {
+        if(queryParams.bodyType.toLowerCase() != car.bodyType.toLowerCase()) {
+          addCar = false;
+        }
+      }
+
+      if(queryParams.minPrice != null) {
+        if(queryParams.minPrice >= car.price ) {
+          addCar = false;
+        }
+      }
+
+      if(queryParams.maxPrice != null) {
+        if(queryParams.maxPrice <= car.price) {
+          addCar = false;
+        }
+      }
+
+      if(queryParams.maxMileage != null) {
+        if(queryParams.maxMileage >= car.mileage) {
+          addCar = false;
+        }
+      }
+      if(addCar) {
+        this.cars.push(car);
+      }
+    }
+
+  }
+
+  resetCars() {
+    this.cars = this.allCars.slice(1,9);
   }
 
 }
